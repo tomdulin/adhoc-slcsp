@@ -1,7 +1,7 @@
 require "test_helper"
 
-class Adhoc::SlcspTest < ActiveSupport::TestCase
+class Slcsp::SlcspTest < ActiveSupport::TestCase
   test "it has a version number" do
-    assert Adhoc::Slcsp::VERSION
+    assert Slcsp::VERSION
   end
 end

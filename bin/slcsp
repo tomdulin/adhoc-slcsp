@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "slcsp"
+require "pry"
+
+def_plans_path = File.join(__dir__, 'lib', 'slcsp', 'data', 'plans.csv')
+def_slcsp_path = File.join(__dir__, 'lib', 'slcsp', 'data', 'slcsp.csv')
+def_out_path = File.join(__dir__, 'lib', 'slcsp', 'data', 'zips.csv')
+
+CLI.new.call()
+
+
+# bin/slcsp
