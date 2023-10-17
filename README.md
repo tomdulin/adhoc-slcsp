@@ -1,8 +1,17 @@
 # Adhoc::Slcsp
 Short description and motivation.
 
-## Usage
-How to use my plugin.
+## setup
+You may need to provide permission to the executa
+```ruby
+sudo chmod 755 'bin/slcsp'
+```
+
+## usage
+Simply run
+```ruby
+bin/slcsp
+```
 
 ## Installation
 Add this line to your application's Gemfile:
