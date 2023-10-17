@@ -15,7 +15,6 @@ Simply run
 bin/slcsp
 ```
 
-
 ## Dev Notes
 -- reduce memory footprint by only recording zipcodes defined in slcsp.csv
 -- main entry point is cli.rb 
@@ -24,6 +23,19 @@ bin/slcsp
 -- reader - simple csv wrapper
 -- storable - common class for data management classes
 -- log - wraps std_out actions, not necessary, but good for debugging 
+
+## Approach
+-- read in targetd zip codes from slcsp.csv
+-- generate reference dictionary for zips file to plans data file on rate_area scoped only to zip codes found in slcsp.csv
+-- aggregate rates to zip code
+  -- * note some rates will be applied to multiple zip codes in the event multiple zip codes are associated to a single rate_area
+-- find second least rate in zip code by droping the min value in zip rate aggregate (deletes all references of like values, no need to check if min value has one or more values)
+Example
+```ruby
+ zipcode = {'466345' => [1,4,2,1,1,5]}
+ zipcode = {'466345' => [4,2,5]} # after removing min value
+ slcsp = 2 # get min value a second time 
+```
 
 ## Problem
 
