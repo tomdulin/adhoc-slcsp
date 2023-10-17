@@ -6,7 +6,7 @@
 ```ruby
 sudo chmod 755 'bin/slcsp'
 ```
--- check gemspec for version details and dependancies
+-- check gemspec for version details and dependancies. 
 -- you may have to run bundle install
 
 ## usage
@@ -18,7 +18,12 @@ bin/slcsp
 
 ## Dev Notes
 -- reduce memory footprint by only recording zipcodes defined in slcsp.csv
--- 
+-- main entry point is cli.rb 
+-- *_data files manage reading and parsing data from files
+-- datum.rb - manages an instance of a zip code to rates
+-- reader - simple csv wrapper
+-- storable - common class for data management classes
+-- log - wraps std_out actions, not necessary, but good for debugging 
 
 ## Problem
 
